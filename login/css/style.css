@@ -63,6 +63,8 @@ input:active,input:focus{
     -webkit-animation: bg_animation 3s ease infinite;
 }
 
+.hanoz{display: none;}
+
 @keyframes bg_animation {
     0%{
         background-position: 0% 50%;
