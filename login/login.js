@@ -13,10 +13,10 @@ function mani(e){
       typewriter
         .typeString('هنوز بک اند سایت تکمیل نشده هفته بعد که تکمیل شد بیا ثبت نام کن😉')
         .pauseFor(300)
-        .deleteChars(70)
+        .deleteAll()
         .typeString('حالا شاید هفته بعدم نشد 😂🤔')
         .pauseFor(1000)
-        .deleteChars(40)
+        .deleteAll()
         .start();
     
 }
