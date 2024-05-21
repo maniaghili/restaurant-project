@@ -1,5 +1,7 @@
 let clic = document.querySelector('.btn_form')
 var app = document.getElementById('app');
+let da = document.querySelector('.da')
+let saa = document.querySelector('.saa')
 
 clic.addEventListener('click',mani)
 
@@ -20,6 +22,34 @@ function mani(e){
         .start();
     
 }
+
+let sw = Swal.mixin({
+  toast : true,
+  position : 'top',
+  showconfirmButton : false
+  
+})
+
+
+
+clic.addEventListener('click', function(e){
+   e.preventDefault()
+  if(saa.value.length < 6){
+    sw.fire({
+      title : 'ورود ناموفق',
+      text : 'رمز عبور شما کمتر از 6 کاراکتر است:)',
+      icon: 'error'})
+  }else if(da.value.length < 8){
+    sw.fire({
+      title : 'ورود ناموفق',
+      text : 'نام کاربری شما کمتر از 8 کاراکتر است:)',
+      icon: 'error'})
+  }else{
+    sw.fire({ title : 'ورود موفق',
+      text : 'شما با موفقیت وارد شدید',
+      icon : 'success'})}
+  
+})
 
 
 
